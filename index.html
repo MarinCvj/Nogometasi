@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <title>Nogometaši</title>
 </head>
-<body>
-    <div class="container">
+<body id="tema" class="theme-light">
+    <button id="switch" class="theme_button" onclick="tema()">Switch</button>
+    <div class="container" id="container">
         <div class="baner">
-            <h1><span class="crveno">Hrvatska</span> do <span class="plavo">finala!!!</span></h1>
-            <p class="autori">Karlo Barković & Marin Cvjetković 3.G</p>
+            <h1><span class="crveno">Hrvatska</span><span class="bijelo"> do </span><span class="plavo">finala!!!</span></h1>
+            <p>Karlo Barković & Marin Cvjetković 3.G</p>
         </div>
 
-        <div class="govor">
+        <div class="govor" id="govor">
             <p>Nakon svega što smo prošli ne možemo biti nezadovoljni. 
                 Možda imaju jake igrače, ali nemaju tim kao što smo mi. 
                 Kao tim smo naučili ne odustajati bez obzira što se desi. 
@@ -25,7 +26,7 @@
             <img src="hrv_momci.jpeg" alt="momci">
         </div>
 
-        <div class="govor">
+        <div class="govor" id="govor">
             <p>Ono što našu reprezentaciju čini posebnom 
                 je volja i želja za igrom. 
                 Hrvatska ima zajednicu kakvu ni jedna druga zemlja nema 
@@ -37,5 +38,15 @@
             <img src="world-cup-tournament-bracket.jpg" alt="brackets">
         </div>
     </div>
+    <script>
+        function tema() {
+            var element = document.body;
+            element.classList.toggle("theme-dark");
+            let govor = document.getElementById('govor');
+            govor.classList.toggle("");
+            let container = document.getElementById('container');
+            container.classList.toggle("container-dark");
+        }
+    </script>
 </body>
 </html>
